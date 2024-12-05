@@ -32,12 +32,16 @@ class Example(QWidget):
         self.update()
 
     def drawing(self, qp):
-        qp.setBrush(QColor(255, 255, 0))
-
         a_0, b_0, a_1, b_1, a_2, b_2 = randint(10, 500), randint(10, 500), randint(10, 500), \
             randint(10, 500), randint(10, 500), randint(10, 500)
+
+        qp.setBrush(QColor(randint(0, 255), randint(0, 255), randint(0, 255)))
         qp.drawEllipse(a_0, b_0, a_0, b_0)
+
+        qp.setBrush(QColor(randint(0, 255), randint(0, 255), randint(0, 255)))
         qp.drawEllipse(a_1, b_1, a_1, b_1)
+
+        qp.setBrush(QColor(randint(0, 255), randint(0, 255), randint(0, 255)))
         qp.drawEllipse(a_2, b_2, a_2, b_2)
 
 
