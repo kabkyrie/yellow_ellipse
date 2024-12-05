@@ -5,7 +5,7 @@ from PyQt6.QtGui import QPainter, QColor
 from PyQt6.QtWidgets import QWidget, QApplication, QPushButton
 
 
-class Example(QWidget):
+class Visual(QWidget):
     def __init__(self):
         super().__init__()
 
@@ -19,6 +19,8 @@ class Example(QWidget):
         self.do_paint = False
         self.button.clicked.connect(self.paint)
 
+
+class Draw(Visual):
     def paintEvent(self, event):
         if self.do_paint:
             qp = QPainter()
@@ -47,6 +49,6 @@ class Example(QWidget):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    ex = Example()
+    ex = Draw()
     ex.show()
     sys.exit(app.exec())
